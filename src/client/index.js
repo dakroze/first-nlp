@@ -13,9 +13,11 @@ import './styles/header.scss'
 console.log(checkForName);
 
 alert("I EXIST")
-alert("I EXIST")
-alert("I EXIST")
-alert("I EXIST")
 
-console.log("CHANGE!!");
 
+// console.log("CHANGE!!");
+
+export {
+    checkForName,
+    handleSubmit
+   }
