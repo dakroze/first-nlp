@@ -1,5 +1,5 @@
 // Import JS Files
-import { checkForText } from './js/nameChecker'
+import { checkForText, scoreCheck } from './js/nameChecker'
 import { handleSubmit } from './js/formHandler'
 import { postData } from './js/postData'
 
@@ -20,6 +20,7 @@ alert("I EXIST")
 
 export {
     checkForText,
+    scoreCheck,
     handleSubmit,
     postData
    }
