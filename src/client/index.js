@@ -1,6 +1,7 @@
 // Import JS Files
-import { checkForName } from './js/nameChecker'
+import { checkForText } from './js/nameChecker'
 import { handleSubmit } from './js/formHandler'
+import { postData } from './js/postData'
 
 // Import CSS files
 import './styles/resets.scss'
@@ -10,7 +11,7 @@ import './styles/form.scss'
 import './styles/header.scss'
 
 
-console.log(checkForName);
+console.log(checkForText);
 
 alert("I EXIST")
 
@@ -18,6 +19,7 @@ alert("I EXIST")
 // console.log("CHANGE!!");
 
 export {
-    checkForName,
-    handleSubmit
+    checkForText,
+    handleSubmit,
+    postData
    }

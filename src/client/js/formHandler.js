@@ -3,12 +3,16 @@ function handleSubmit(event) {
     // check what text was put into form field
     let formText = document.getElementById('name').value
 
-    if (Client.checkForName(formText) === "NOK"){
-        alert("Please input text only")
+    if (Client.checkForText(formText) === "NOK"){
+        alert("No input provided")
     }
     else {
         console.log("::: Form Submitted :::")
-        client.postData('/pr',formText)
+        Client.postData('/pr',formText)
+        .then( data => {
+            document.getElementById('results').innerHTML = `Score_Tag: ${data.score_tag}
+                                                            Subjectivity: ${data.subjectivity}`
+        })
     }
 }
 

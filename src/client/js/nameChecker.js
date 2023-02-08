@@ -1,12 +1,11 @@
 function checkForText(inputText) {
     console.log("::: Running checkForText :::", inputText);
-    if(typeof(inputText) ==! string) {
-        alert("Please input text only")
+    if(!inputText) {
+        console.log('NOK')
         return "NOK"
     } else {
-        alert ("Text Received")
         return "OK"
     }
 }
 
-export { checkForName }
+export { checkForText }
