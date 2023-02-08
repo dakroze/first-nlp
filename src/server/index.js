@@ -1,6 +1,7 @@
 var path = require('path');
 const express = require('express');
 const cors = require('cors');
+const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 dotenv.config();
 
@@ -14,6 +15,8 @@ const posExt = require('./posExt.js')
 const app = express()
 
 app.use(cors())
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.text());
 app.use(express.static('dist'))
 
 console.log(__dirname)
@@ -35,7 +38,8 @@ app.get('/test', (req, res) => {
 
 // POST request route
 app.post('/pr', (req,res) => {
-    const userText = req.body;
+    const userText = req.body
+    console.log(userText)
     posExt(`${process.env.API_KEY}`,`${userText}`)
     .then(data => res.send(data))
 })
