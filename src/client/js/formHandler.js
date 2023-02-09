@@ -10,8 +10,8 @@ function handleSubmit(event) {
         console.log("::: Form Submitted :::")
         Client.postData('/pr',formText)
         .then( data => {
-            document.getElementById('results').innerHTML = `::: Score_Tag: ${Client.scoreCheck(data.score_tag)}
-                                                            ::: Subjectivity: ${data.subjectivity}`
+            document.getElementById('results').innerHTML = `:::Score_Tag: ${Client.scoreCheck(data.score_tag)}
+                                                            :::Subjectivity: ${data.subjectivity}`
         })
     }
 }
