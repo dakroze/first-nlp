@@ -8,7 +8,7 @@ function handleSubmit(event) {
     }
     else {
         console.log("::: Form Submitted :::")
-        Client.postData('/pr',formText)
+        Client.postData('http://localhost:8081/pr',formText)
         .then( data => {
             document.getElementById('results').innerHTML = `:::Score_Tag: ${Client.scoreCheck(data.score_tag)}
                                                             :::Subjectivity: ${data.subjectivity}`
