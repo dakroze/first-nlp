@@ -18,10 +18,10 @@ const posExt = async (key, text) => {
     const response = await fetch(URL, requestOptions)
     try {
         const res = await response.json()
-        console.log(res)
         const data =  {
                         score_tag: res.score_tag,
-                        subjectivity: res.subjectivity 
+                        subjectivity: res.subjectivity,
+                        text: res.sentence_list[0].text
                       }
         console.log(data)
         return data

@@ -8,10 +8,14 @@ function handleSubmit(event) {
     }
     else {
         console.log("::: Form Submitted :::")
+        let score = document.getElementById('score')
+        let sub = document.getElementById('sub')
+        let text = document.getElementById('text')
         Client.postData('http://localhost:8081/pr',formText)
         .then( data => {
-            document.getElementById('results').innerHTML = `:::Score_Tag: ${Client.scoreCheck(data.score_tag)}
-                                                            :::Subjectivity: ${data.subjectivity}`
+            score.innerHTML = `::: Score_Tag: ${Client.scoreCheck(data.score_tag)} :::`
+            sub.innerHTML = `::: Subjectivity: ${data.subjectivity} :::`
+            text.innerHTML = `::: Subjectivity: ${data.text} :::`
         })
     }
 }

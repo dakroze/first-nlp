@@ -10,3 +10,11 @@ input {
     line-height: 16px;
     margin: 10px 0;
 }
+
+#results {
+    display: flex;
+    flex-direction: column;
+    background-color: goldenrod;
+    border: solid;
+    color: rebeccapurple;
+}
