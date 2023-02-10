@@ -1,6 +1,6 @@
 # Project Requirements:
 
-### Your project must:
+### This project requires:
 
 - [ ] Be set up with Webpack, Express, Node, and Sass, and Service Workers
 
@@ -10,7 +10,7 @@
 
 - [ ] Have a minimum of one form field
 
-- [ ] Make one request to the Aylien API
+- [ ] Meaningcloud sentiment analysis API
 
 - [ ] Use Sass for styling
 
@@ -18,6 +18,5 @@
 
 - [ ] Response from the API must be added to the view for a user to see 
 
-- [ ] Be able to show content offline
+- [ ] Be able to show content offline using Service workers.
 
-All of these requirements are explained throughout the course. Specifics on setting up the Aylien API are found in the README file of this repo.

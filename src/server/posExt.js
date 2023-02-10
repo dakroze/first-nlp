@@ -1,12 +1,12 @@
 const FormData = require('form-data');
 const fetch = require('node-fetch');
 const URL = "https://api.meaningcloud.com/sentiment-2.1";
-const posExt = async (key, text) => {
+const posExt = async (key, url) => {
 
 // console.log(`Your API key is ${process.env.API_KEY}`)
     const formdata = new FormData();
     formdata.append("key", key);
-    formdata.append("txt", text);
+    formdata.append("url", url);
     formdata.append("lang", 'en');  // 2-letter code, like en es fr ...
 
     const requestOptions = {
