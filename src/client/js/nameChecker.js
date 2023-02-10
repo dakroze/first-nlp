@@ -1,9 +1,14 @@
 function checkForText(inputText) {
     console.log("::: Running checkForText :::", inputText);
     if(!inputText) {
-        console.log('NOK')
-        return "NOK"
-    } else {
+        alert('No input provided')
+        return "NOK";
+    }
+    else if(!isNaN(inputText)){
+        alert("This AI only works on english sentences. Please re-enter input")
+        return "NOK";
+    }
+    else {
         return "OK"
     }
 }

@@ -4,7 +4,7 @@ function handleSubmit(event) {
     let formText = document.getElementById('name').value
 
     if (Client.checkForText(formText) === "NOK"){
-        alert("No input provided")
+        throw new Error('Input is either empty or isnt text. Please check input');
     }
     else {
         console.log("::: Form Submitted :::")
