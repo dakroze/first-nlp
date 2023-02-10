@@ -18,10 +18,11 @@ const posExt = async (key, url) => {
     const response = await fetch(URL, requestOptions)
     try {
         const res = await response.json()
+        console.log(res)
         const data =  {
                         score_tag: res.score_tag,
                         subjectivity: res.subjectivity,
-                        text: res.sentence_list[0].text
+                        text: res.sentence_list[Math.floor(Math.random() * res.sentence_list.length)].text
                       }
         console.log(data)
         return data

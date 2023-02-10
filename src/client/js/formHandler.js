@@ -15,7 +15,7 @@ function handleSubmit(event) {
         .then( data => {
             score.innerHTML = `::: Score_Tag: ${Client.scoreCheck(data.score_tag)} :::`
             sub.innerHTML = `::: Subjectivity: ${data.subjectivity} :::`
-            text.innerHTML = `::: Subjectivity: ${data.text} :::`
+            text.innerHTML = `::: Text: ${data.text} :::`
         })
     }
 }
